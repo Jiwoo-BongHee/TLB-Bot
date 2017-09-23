@@ -1,6 +1,6 @@
 var Discord = require('discord.js'); //Requit : discord.js (installation : "npm install discord.js")
 var ffmpeg = require("ffmpeg"); //Requit :
-var token = process_env.Discord_Token; 
+var token = process.env.Discord_Token; 
 var client = new Discord.Client();
 var mention = "<@343473031106002944>";
 let waitingForResponse = new Map();
