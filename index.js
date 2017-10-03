@@ -98,26 +98,30 @@ if(message.channel.type == 'dm'){
 if (message.content === "?rappel"){
 	if (message.member.roles.find("name", "Berserker")){
 	var rappelleur = message.author.username
-	message.guild.roles.get("343703724016795650").members.forEach(function(member){
-		member.send(["Bonjour !",
-		"",
-		"Ceci est un message envoyé par un bot du serveur \"TLB Project\" concernant les nouveaux venus et les inactifs de lecture.",
-		"",
-		"__Pour les nouveaux :__", 
-		"",
-		"N'oubliez pas que le serveur a pour but premier de recceuillir des avis sur notre oeuvre, merci donc de prendre votre temps pour lire et nous faire part de vos retours via les __questionnaires__ à votre disposition dans le chanel #projet.",
-		"",
-		"__Pour les inactifs :__ (Plus d'un mois de présence sur le serveur sans questionnaire remplis / aucune partie de l'oeuvre lu)",
-		"",
-		"Rien de bien méchant, mais veuillez, s'il vous plaît, prendre 5min afin de __répondre aux questionnaires après votre lecture__.",
-		"Une purge kickant les personnes inactives (au niveau de la lecture uniquement) aura lieu __début Septembre__, d'ici là, nous espérons recevoir votre questionnaire afin de vous éviter le kick du serveur pour inactivité de lecture. __(En remplir un seul suffit à vous éviter le kick, même celui du prologue. Nous demandons seulement une implication de votre part au niveau de la lecture, et seulement ça.)__",
-		"",
-		"Merci de votre attention,",
-		"",
-		"Cordialement,",
-		"",
-		"Michiru. (Inutile de me répondre, je suis un BOT !)"])
-		})
+	message.guild.roles.get("302744313731743757").members.forEach(function(member){
+		member.send(["**Bonjour !**",
+			"",
+			"Ceci est un message envoyé par un bot du serveur __\"TLB Project\"__, si vous recevez ce rappel :",
+			"",
+			"- Vous êtes __nouveau / nouvelle__ sur TLB.",
+			"",
+			"- Vous êtes __inactif__ (En terme de lecture).",
+			"",
+			"**Pour les nouveaux :**",
+			"",
+			"N'oubliez pas que le serveur a pour but premier de recceuillir des avis sur notre oeuvre, merci donc de prendre votre temps pour lire et nous faire part de vos retours via les questionnaires à votre disposition dans le chanel \"#projet\".",
+			"",
+			"**Pour les inactifs :**",
+			"",
+			"Rien de bien méchant, mais veuillez, s'il vous plaît, prendre 5min afin de répondre aux questionnaires (Prologue Inclu) après votre lecture.",
+			"Si nous n'avons toujours rien (Un seul questionnaire nous suffit, même celui du Prologue, qui est relativement court) d'ici une semaine venant de vous, vous serez kick du serveur pour inactivité de lecture.",
+			"",
+			"Merci de votre attention,",
+			"",
+			"Cordialement,",
+			"",
+			"Michiru. (Inutile de me répondre, je suis un BOT !)"])
+	})
 	console.log(rappelleur + "a fait un rappel aux inactifs")
 	}
 }
