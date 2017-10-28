@@ -12,6 +12,43 @@ client.on("ready", () => {
 });
 
 client.on("message", (message) => {
+	
+var voiceCO = client.user.voiceStatuts
+var str
+
+switch(voiceCO){
+    case 0:
+        str = "CONNECTED"
+        break;
+
+    case 1:
+        str = "CONNECTING"
+        break;
+    
+    case 2:
+        str = "AUTHENTICATING"
+        break;
+
+    case 3:
+        str = "RECONNECTING"
+        break;
+
+    case 4:
+        str = "DISCONNECTED"
+        break;
+    
+    default:
+        str = "gnagna"
+        break
+}
+
+if(str != "CONNECTED"){
+    channel.join().then(connection => {
+	const channel = client.channels.find('name', "KawaiiSongs");
+        const radio = "http://streaming.radionomy.com/Subarashii" 
+        connection.playStream(radio);
+    })
+}
 
 if (message.content === "?join"){
 	const channel = client.channels.find('name', "KawaiiSongs");
