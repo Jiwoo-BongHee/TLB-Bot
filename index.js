@@ -45,7 +45,7 @@ switch(voiceCO){
 if(str != "CONNECTED"){
     channel.join().then(connection => {
 	const channel = client.channels.find('name', "KawaiiSongs");
-        const radio = "http://streaming.radionomy.com/Subarashii" 
+        const radio = "https://listen.moe/stream" 
         connection.playStream(radio);
     })
 }
@@ -54,7 +54,7 @@ if (message.content === "?join"){
 	const channel = client.channels.find('name', "KawaiiSongs");
 	var auteur = message.author.username
 		channel.join().then(connection => {
-        	const radio = "http://streaming.radionomy.com/Subarashii" 
+        	const radio = "https://listen.moe/stream" 
         	connection.playStream(radio);
       		console.log(new Date + auteur + " m'a connecté sur le channel \"KawaiiSongs\" du serveur TLB project")
         });
