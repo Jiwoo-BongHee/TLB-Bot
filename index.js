@@ -14,24 +14,24 @@ client.on("ready", () => {
 client.on("message", (message) => {
 
 if (message.content === "?join"){
-const channel = client.channels.find('name', "KawaiiSongs");
-var auteur = message.author.username;
-	channel.join().then(connection => {
-        const radio = "http://streaming.radionomy.com/Subarashii" 
-        connection.playStream(radio);
-      	console.log(new Date + auteur + " m'a connecté sur le channel \"KawaiiSongs\" du serveur TLB project")
+	const channel = client.channels.find('name', "KawaiiSongs");
+	var auteur = message.author.username
+		channel.join().then(connection => {
+        	const radio = "http://streaming.radionomy.com/Subarashii" 
+        	connection.playStream(radio);
+      		console.log(new Date + auteur + " m'a connecté sur le channel \"KawaiiSongs\" du serveur TLB project")
         });
-    };
+}
 
 if (message.content === "?stop"){
-const channel = client.channels.find('name', "KawaiiSongs");
-var auteur = message.author.username;
-    if (message.member.roles.find("name", "DJ")){
-        channel.leave();
-        console.log("--Deconnexion--")
-        console.log(new Date + auteur + " m'a déconnecté du channel \"KawaiiSongs\" serveur TLB project")
+	const channel = client.channels.find('name', "KawaiiSongs");
+	var auteur = message.author.username;
+    	if (message.member.roles.find("name", "DJ")){
+        	channel.leave();
+        	console.log("--Deconnexion--")
+        	console.log(new Date + auteur + " m'a déconnecté du channel \"KawaiiSongs\" serveur TLB project")
         };
-};
+	};
 
 if (message.content === "Michiru"){
 	if (message.member.roles.find("name", "Berserker")){
@@ -125,11 +125,100 @@ if (message.content === "?rappel"){
 	console.log(rappelleur + "a fait un rappel aux inactifs")
 	}
 }
+
+if (message.content.startsWith("??rappel1")){
+	if (message.author.id != "")
+	message.guild.roles.get("302744313731743757").members.forEach(function(member){
+		member.send(["Bonjour ! ",
+		"",
+		"Je suis un BOT du serveur **__\"TLB Project\"__** dont tu fais parti, je viens te transmettre un message de la part du staff !",
+		"",
+		"Pas de stress, tu ne risques rien !",
+		"",
+		"TLB Project est un serveur qui diffuse un **Novel, projet amateur à but professionnel**. Leur objectif est de recceuillir des avis sur le scénario du projet qui sera, dans quelques années, **développé en manga** !",
+		"",
+		"Ce message est envoyé à tous les membres du serveur.",
+		"",
+		"Tout d'abord : **Merci de votre soutien !**",
+		"",
+		"Ensuite, nous vous rappellons que remplir les questionnaires suite à votre lecture nous permet d'avancer : **Vous participez à la qualité du Manga par vos critiques et avis !**",
+		"",
+		"Merci donc, de prendre un peu de votre temps pour nous faire parvenir vos __formulaires après avoir lu__ !",
+		"",
+		"Sur TLB, des __animations autours de la culture Japonaise et Otaku ont lieu fréquemment__, n'hésitez pas à venir y participer !",
+		"",
+		"Si vous avez des **questions/remarques** suite à ce message (Par exemple : Où sont les questionnaires ?), merci de vous adresser à un **membre du staff** qui y répondra !",
+		"",
+		"Plein de bonnes choses, et n'oubliez pas : **TLB compte sur vous !**",
+		"",
+		"Cordialement,",
+		"",
+		"__Michiru. __ (Oh, je suis un BOT je te rappelle, pas la peine de me répondre, adresse toi au staff sur le serveur pour la suite !)"])
+	})
+}
+
+if (message.content.startsWith("??rappel2")){
+	if (message.author.id != "")
+	message.guild.roles.get("302744310749593603").members.forEach(function(member){
+		member.send(["Bonjour ! ",
+		"",
+		"Je suis un BOT du serveur **__\"TLB Project\"__** dont tu fais parti, je viens te transmettre un message de la part du staff !",
+		"",
+		"Pas de stress, tu ne risques rien !",
+		"",
+		"TLB Project est un serveur qui diffuse un **Novel, projet amateur à but professionnel**. Leur objectif est de recceuillir des avis sur le scénario du projet qui sera, dans quelques années, **développé en manga** !",
+		"",
+		"Ce message est envoyé à tous les membres du serveur.",
+		"",
+		"Tout d'abord : **Merci de votre soutien !**",
+		"",
+		"Ensuite, nous vous rappellons que remplir les questionnaires suite à votre lecture nous permet d'avancer : **Vous participez à la qualité du Manga par vos critiques et avis !**",
+		"",
+		"Merci donc, de prendre un peu de votre temps pour nous faire parvenir vos __formulaires après avoir lu__ !",
+		"",
+		"Sur TLB, des __animations autours de la culture Japonaise et Otaku ont lieu fréquemment__, n'hésitez pas à venir y participer !",
+		"",
+		"Si vous avez des **questions/remarques** suite à ce message (Par exemple : Où sont les questionnaires ?), merci de vous adresser à un **membre du staff** qui y répondra !",
+		"",
+		"Plein de bonnes choses, et n'oubliez pas : **TLB compte sur vous !**",
+		"",
+		"Cordialement,",
+		"",
+		"__Michiru. __ (Oh, je suis un BOT je te rappelle, pas la peine de me répondre, adresse toi au staff sur le serveur pour la suite !)"])
+	})
+}
+
+if (message.content.startsWith("??rappel3")){
+	if (message.author.id != "")
+	message.guild.roles.get("302736761078022146").members.forEach(function(member){
+		member.send(["Bonjour ! ",
+		"",
+		"Je suis un BOT du serveur **__\"TLB Project\"__** dont tu fais parti, je viens te transmettre un message de la part du staff !",
+		"",
+		"Pas de stress, tu ne risques rien !",
+		"",
+		"TLB Project est un serveur qui diffuse un **Novel, projet amateur à but professionnel**. Leur objectif est de recceuillir des avis sur le scénario du projet qui sera, dans quelques années, **développé en manga** !",
+		"",
+		"Ce message est envoyé à tous les membres du serveur.",
+		"",
+		"Tout d'abord : **Merci de votre soutien !**",
+		"",
+		"Ensuite, nous vous rappellons que remplir les questionnaires suite à votre lecture nous permet d'avancer : **Vous participez à la qualité du Manga par vos critiques et avis !**",
+		"",
+		"Merci donc, de prendre un peu de votre temps pour nous faire parvenir vos __formulaires après avoir lu__ !",
+		"",
+		"Sur TLB, des __animations autours de la culture Japonaise et Otaku ont lieu fréquemment__, n'hésitez pas à venir y participer !",
+		"",
+		"Si vous avez des **questions/remarques** suite à ce message (Par exemple : Où sont les questionnaires ?), merci de vous adresser à un **membre du staff** qui y répondra !",
+		"",
+		"Plein de bonnes choses, et n'oubliez pas : **TLB compte sur vous !**",
+		"",
+		"Cordialement,",
+		"",
+		"__Michiru. __ (Oh, je suis un BOT je te rappelle, pas la peine de me répondre, adresse toi au staff sur le serveur pour la suite !)"])
+	})
+}
+
 });
 
-
 client.login(token);
-
-
-
-
