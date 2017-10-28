@@ -43,8 +43,8 @@ switch(voiceCO){
 }
 
 if(str != "CONNECTED"){
+    var channel = message.guild.channels.find('name', "KawaiiSongs")
     channel.join().then(connection => {
-	const channel = client.channels.find('name', "KawaiiSongs");
         const radio = "https://listen.moe/stream" 
         connection.playStream(radio);
     })
