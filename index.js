@@ -127,7 +127,7 @@ if (message.content === "?rappel"){
 }
 
 if (message.content.startsWith("??rappel1")){
-	if (message.author.id != "")
+	if (message.author.id != "367374581884780545") return;
 	message.guild.roles.get("302744313731743757").members.forEach(function(member){
 		member.send(["Bonjour ! ",
 		"",
@@ -158,7 +158,7 @@ if (message.content.startsWith("??rappel1")){
 }
 
 if (message.content.startsWith("??rappel2")){
-	if (message.author.id != "")
+	if (message.author.id != "367374581884780545") return;
 	message.guild.roles.get("302744310749593603").members.forEach(function(member){
 		member.send(["Bonjour ! ",
 		"",
@@ -189,7 +189,7 @@ if (message.content.startsWith("??rappel2")){
 }
 
 if (message.content.startsWith("??rappel3")){
-	if (message.author.id != "")
+	if (message.author.id != "367374581884780545") return;
 	message.guild.roles.get("302736761078022146").members.forEach(function(member){
 		member.send(["Bonjour ! ",
 		"",
