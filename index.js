@@ -61,10 +61,10 @@ if (message.content === "?join"){
 }
 
 if (message.content === "?stop"){
-	const channel = client.channels.find('name', "KawaiiSongs");
+	const channelle = client.channels.find('name', "KawaiiSongs");
 	var auteur = message.author.username;
     	if (message.member.roles.find("name", "DJ")){
-        	channel.leave();
+        	channelle.leave();
         	console.log("--Deconnexion--")
         	console.log(new Date + auteur + " m'a déconnecté du channel \"KawaiiSongs\" serveur TLB project")
         };
